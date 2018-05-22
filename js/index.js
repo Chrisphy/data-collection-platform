@@ -40,7 +40,23 @@ function createGraph(){
             format: '%Y-%m-%d'
         }
     }
+},
+tooltip: {
+  format: {
+      title: function () { return 'A Badass Title '; },
+      value: function (value, ratio, id) {
+          var format = function(value) {
+             var one = $scope.numbers.numberOne;
+             var two = $scope.numbers.numberTwo;
+             parseInt(one, two);
+             var total = one + two;
+             return ("$" + value);
+          }
+          return format(value);
+      }
+  }
 }
+
   });
 }
 
@@ -64,3 +80,27 @@ ReactDOM.render(
 
 
 
+//Clock
+
+function clock() {// We create a new Date object and assign it to a variable called "time".
+var time = new Date(),
+    
+    // Access the "getHours" method on the Date object with the dot accessor.
+    hours = time.getHours(),
+    
+    // Access the "getMinutes" method with the dot accessor.
+    minutes = time.getMinutes(),
+    
+    
+    seconds = time.getSeconds();
+
+document.querySelectorAll('.clock')[0].innerHTML = harold(hours) + ":" + harold(minutes) + ":" + harold(seconds);
+  
+  function harold(standIn) {
+    if (standIn < 10) {
+      standIn = '0' + standIn
+    }
+    return standIn;
+  }
+}
+setInterval(clock, 1000);

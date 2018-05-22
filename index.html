@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <title>React Table Search Pagination</title>
-  
-  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.0/css/bulma.min.css"/>
 
-      <link rel="stylesheet" href="css/style.css">
-      <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.css'>
 
-  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.0/css/bulma.min.css" />
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.css'>
+
+
 </head>
 
 <body>
@@ -19,66 +19,193 @@
 
   <!-- Navbar -->
   <section class="hero is-medium is-bold">
-      <div class="hero-head">
-        <nav class="navbar">
-          <div class="container">
-            <div class="navbar-brand">
-              <a class="navbar-item">
-                <img src="./images/pencil_icon.png" alt="Logo">
+    <div class="hero-head">
+      <nav class="navbar">
+        <div class="container">
+          <div class="navbar-brand">
+            <a class="navbar-item">
+              <img src="./images/makers-hub.jpg" alt="Logo" width="120rem" height="50rem">
+            </a>
+            <span class="navbar-burger burger" data-target="navbarMenu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </div>
+          <div id="navbarMenu" class="navbar-menu">
+            <div class="navbar-end">
+              <a class="navbar-item" href="./index.html">
+                Home
               </a>
-              <span class="navbar-burger burger" data-target="navbarMenu">
-                <span></span>
-                <span></span>
-                <span></span>
-              </span>
-            </div>
-            <div id="navbarMenu" class="navbar-menu">
-              <div class="navbar-end">
-                <a class="navbar-item"  href ="./index.html">
-                  Home
-                </a>
-                <a class="navbar-item"  href ="./live.html">
-                  Live View
-                </a>
-                <a class="navbar-item"  href ="./faq.html">
-                  FAQ
-                </a>
-              </div>
+              <a class="navbar-item" href="./live.html">
+                Live View
+              </a>
+              <a class="navbar-item" href="./faq.html">
+                FAQ
+              </a>
             </div>
           </div>
-        </nav>
+        </div>
+      </nav>
+    </div>
+  </section>
+
+
+
+
+  <div class="columns">
+    <div class="column">
+      <div class="chart"></div>
+    </div>
+
+
+    <div class="column">
+
+
+      <div class="tile is-parent">
+        <article class="tile is-child notification is-info">
+
+
+          <p class="title">Current Time</p>
+          <div class="content">
+
+            <div class="clock"></div>
+
+            <p class="subtitle">The current most active rooms are</p>
+
+            <ul class="menu-list">
+              <ol>
+                <li>
+                  <a>Room xyz</a>
+                </li>
+                <li>
+                  <a>Room yzx</a>
+                </li>
+                <li>
+                  <a>Room ABC</a>
+                </li>
+              </ol>
+
+            </ul>
+
+          </div>
+
+
+        </article>
       </div>
- </section>
 
 
+    </div>
+
+  </div>
 
 
+  <div class="container">
 
+    <div class="columns">
 
+        <div class="column">
 
+      <div class="card">
+        <header class="card-header">
+          <p class="card-header-title">
+            Total for today
+          </p>
+        </header>
+        <div class="card-content">
+          <div class="content">
+            132 people
+          </div>
+        </div>
+      </div>
+      </div>
 
- <div class="container">
+      <div class="column">
 
-  <svg class="chart"></svg>
+      <div class="card">
+        <header class="card-header">
+          <p class="card-header-title">
+            Highest number of people today
+          </p>
+        </header>
+        <div class="card-content">
+          <div class="content">
+            74 people
+          </div>
+        </div>
+      </div>
 
-  <div id="table"></div>
 </div>
-<script src="https://fb.me/react-with-addons-15.1.0.js"></script>
-<script src="https://fb.me/react-dom-15.1.0.js"></script>
-<script src="https://npmcdn.com/react-data-components@1.0.1/dist/react-data-components.min.js"></script>
+
+
+<div class="column">
+
+    <div class="card">
+      <header class="card-header">
+        <p class="card-header-title">
+          Most popular time today
+        </p>
+      </header>
+      <div class="card-content">
+        <div class="content">
+            2.24pm
+        </div>
+      </div>
+    </div>
+
+</div>
+
+<div class="column">
+
+    <div class="card">
+      <header class="card-header">
+        <p class="card-header-title">
+          Running total 
+        </p>
+      </header>
+      <div class="card-content">
+        <div class="content">
+            10,987 people
+          <br>
+        </div>
+      </div>
+    </div>
+
+</div>
+
+    </div>
+  </div>
+
+</br>
+
+  <div class="container">
+
+    <div id="table"></div>
+
+  </div>
+
+
+
+
+
+  <!-- Scripts -->
+
+  <script src="https://fb.me/react-with-addons-15.1.0.js"></script>
+  <script src="https://fb.me/react-dom-15.1.0.js"></script>
+  <script src="https://npmcdn.com/react-data-components@1.0.1/dist/react-data-components.min.js"></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.min.css'></script>
-<script src='https://cdn.rawgit.com/carlosrocha/react-data-components/v1.0.0/css/table-twbs.css'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css'></script>
-
-  
+  <script src='https://cdn.rawgit.com/carlosrocha/react-data-components/v1.0.0/css/table-twbs.css'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css'></script>
 
 
-<script src='http://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.js'></script>
 
-<script type="text/javascript" src="js/chance.js"></script>
-<script  src="js/index.js"></script>
-<script  src="js/bulma.js"></script>
+
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.js'></script>
+
+  <script type="text/javascript" src="js/chance.js"></script>
+  <script src="js/index.js"></script>
+  <script src="js/bulma.js"></script>
 
 
 
