@@ -94,6 +94,7 @@ var time = new Date(),
     
     seconds = time.getSeconds();
 
+
 document.querySelectorAll('.clock')[0].innerHTML = harold(hours) + ":" + harold(minutes) + ":" + harold(seconds);
   
   function harold(standIn) {
@@ -103,4 +104,12 @@ document.querySelectorAll('.clock')[0].innerHTML = harold(hours) + ":" + harold(
     return standIn;
   }
 }
+
+
+if(document.getElementById('clock') != null) {
 setInterval(clock, 1000);
+}
+
+
+
+
